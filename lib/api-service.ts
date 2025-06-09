@@ -68,7 +68,7 @@ async function apiRequest<T>(params: ApiRequestParams): Promise<T> {
 
     const data = await response.json();
     return data;
-  } catch (error) {
+  } catch (error : any) {
     clearTimeout(timeoutId);
 
     if (error.name === "AbortError") {
